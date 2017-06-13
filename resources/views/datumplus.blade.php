@@ -3,45 +3,40 @@
 @section('content')
 
 <div class="container">
-
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-1">
+    @include('partials._drfilter')
+    </div>
 
-            <table class="table table-bordered table-striped" >
+
+
+        <div class="col-md-6 col-md-offset-2">
+
+            <table class="table table-bordered table-striped table-condensed" >
 
                     <thead>
                     <tr>
                         <td>Doctor</td>
-                        <td>PatNum</td>
-                        <td>Finacial Class</td>
-                        <td>Chg Code</td>
-                        <td>Description</td>
-                        <td>DRG</td>
                         <td>Amount</td>
                     </tr>
                     </thead>
 
                     <tbody>
-                    @foreach ($results as $result)
+                        @foreach ($patchgs as $result)
 
-                    <tr>
-                        <td>{{ $result->AdmDr }}</td>
-                        <td>{{ $result->AccountNum }}</td>
-                        <td>{{ $result->FC }}</td>
-                        <td>{{ $result->ChgCode}}</td>
-                        <td>{{ $result->ChgDescription}}</td>
-                        <td>{{ $result->DRG}}</td>
-                        <td>${{  number_format($result->TxnAmt,2) }}</td>
-                    </tr>
+                            <tr>
+                                <td class="text-center">{{ $result->AdmDr }}</td>
+                                <td class="text-right">${{ number_format($result->TxnAmt,2)}}</td>
+                            </tr>
 
-                    @endforeach
-                </tbody>
+                        @endforeach
+                    </tbody>
+
             </table>
 
+        </div>
     </div>
 </div>
-</div>
-<div class="col-md-12 col-md-offset-4">
-<?php echo $results->render(); ?>
-</div>
+
+
 @endsection

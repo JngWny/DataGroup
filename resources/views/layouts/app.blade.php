@@ -67,7 +67,5 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
-<footer>
-	@include('partials._footer')
-</footer>
+
 </html>
