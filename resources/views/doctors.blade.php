@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="text-center">Doctors count unique MRN</h1>
 
-<div class="container">
 
     <div class="row">
 
@@ -34,7 +34,5 @@
     </div>
 </div>
 </div>
-<div class="col-md-12 col-md-offset-4">
-<?php echo $doctors->render(); ?>
-</div>
+
 @endsection

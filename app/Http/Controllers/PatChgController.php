@@ -27,19 +27,26 @@ class PatChgController extends Controller
      * Display a listing of the DrList with mrn count
      *
 
-    distinct  doctors and MRN
-        $doctors = PatChg::select('AdmDr','MRN')->groupby('AdmDr','MRN')->paginate(15);
+    PatChg::distinct()
+        ->select('AdmDr','MRN')
+        ->groupby('AdmDr')
+        ->selectraw('count(MRN)as MRN,AdmDr')
+        ->get()->paginate(15);
 
      *
      * @return \Illuminate\Http\Response
      */
     public function drindex()
     {
-        //
+        //unique patient count
 
-       // $doctors=select('AdmDr ,count(MRN) as MRN from $doctors0');
 
-        $doctors = PatChg::select('AdmDr','MRN')->count('MRN')->groupby('AdmDr')->paginate(15);
+
+        $doctors = PatChg::groupby('AdmDr')
+        ->selectraw('count(distinct MRN) as MRN,AdmDr')
+        ->get()
+
+        ;
 
         Return view('doctors',['doctors'=>$doctors]);
 
@@ -94,8 +101,6 @@ $patchgs = PatChg::groupby('AdmDr')
         ->selectraw('sum(TxnAmt)as TxnAmt,AdmDr')
         ->get()
         ;
-
-
 
         Return view('datumplus',['patchgs'=>$patchgs]);
 
