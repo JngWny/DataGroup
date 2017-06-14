@@ -6,14 +6,14 @@
 
     <div class="row">
 
-        <div class="col-md-8 col-md-offset-1">
+        <div class="col-md-4 col-md-offset-4">
 
             <table class="table table-bordered table-striped table-condensed" >
 
                     <thead>
                     <tr>
                         <td>Doctor</td>
-                        <td>MedRecNum</td>
+                        <td>MedRecNum Count</td>
 
                     </tr>
                     </thead>

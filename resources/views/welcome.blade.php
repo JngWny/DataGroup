@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    <h1>This could be your data set</h1>
                 </div>
 
                 <div class="links">

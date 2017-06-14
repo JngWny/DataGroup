@@ -9,18 +9,24 @@
             <div class="container">
                 <div class="navbar-header">
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Data Web Style') }}
+                        Solo_Datos
                     </a>
+                    <div class="btn-group">
+
+
+                    <a href="{{route('doctors')}}" class="btn btn-primary">DrsMrn</a>
+                    <a href="{{route('baddatum')}}" class="btn btn-danger">BadData</a>
+                    <a href="{{route('AmtbyDr')}}" class="btn btn-success">DrsAmts</a>
+
+                    </div>
+
+
+
+
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

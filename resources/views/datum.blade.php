@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<h1 class="text-center">Only Pats with Drg not Sorted or grouped</h1>
 <div class="container">
 
     <div class="row">
@@ -31,7 +31,7 @@
                         <td>{{ $result->ChgCode}}</td>
                         <td>{{ $result->ChgDescription}}</td>
                         <td>{{ $result->DRG}}</td>
-                        <td>${{  number_format($result->TxnAmt,2) }}</td>
+                        <td class="text-right">${{  number_format($result->TxnAmt,2) }}</td>
                     </tr>
 
                     @endforeach

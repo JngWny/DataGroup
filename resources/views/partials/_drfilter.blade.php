@@ -8,9 +8,9 @@
     </thead>
 
 	<tbody class="dr">
-        @foreach ($patchgs as $result)
+        @foreach ($patchgs as $drnum)
             <tr>
-                <td>{{ $result->AdmDr }}</td>
+                <td>{{ $drnum->AdmDr }}</td>
                 <td>{{Form::radio('Include','value','true')}}</td>
             </tr>
         @endforeach

@@ -17,9 +17,9 @@ Route::get('/', function ()
 	});
 
 Auth::routes();
-Route::get('/datum', 'PatChgController@index');
-Route::get('/doctors', 'PatChgController@drindex');
-Route::get('/datumplus', 'PatChgController@dataplus');
+Route::get('/datum', 'PatChgController@index')->name('baddatum');
+Route::get('/doctors', 'PatChgController@drindex')->name('doctors');
+Route::get('/datumplus', 'PatChgController@dataplus')->name('AmtbyDr');
 Route::get('/home', 'HomeController@index');
 
 

@@ -8,8 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 use Html;
 
+
 class PatChgController extends Controller
 {
+
+  /**
+     * Fixauthentication of the resource.
+     *
+     *
+     */
+public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -23,6 +40,7 @@ class PatChgController extends Controller
         Return view('datum',['results'=>$results]);
 
     }
+
     /**
      * Display a listing of the DrList with mrn count
      *
@@ -84,7 +102,7 @@ class PatChgController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\PatChg  $datum
+     * @param  \App\PatChg  $patchg
      * @return \Illuminate\Http\Response
 
 $patchgs = PatChg::groupby('AdmDr')

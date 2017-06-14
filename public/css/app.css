@@ -39,6 +39,25 @@ tbody
     padding-bottom: 5px;
     padding-left: 5px;
     margin-bottom: 0;
+}
+drcolors
+{
+	foreach($)
 
+		switch
+			{
+		    case "Bird,Tweety":
+		        color: blue;
+		        background-color:white;
+		        break;
+		    case "Buzzard,Beaky":
+		        color: white;
+		        background-color:red;
+		        break;
+		    default:
+		        color: black;
+		        background-color:white;
+		        break;
+			}
 }
 
