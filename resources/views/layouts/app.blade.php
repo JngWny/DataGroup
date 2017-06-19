@@ -18,9 +18,9 @@
                     <div class="btn-group">
 
 
-                    <a href="{{route('doctors')}}" class="btn btn-primary">DrsMrn</a>
-                    <a href="{{route('baddatum')}}" class="btn btn-danger">BadData</a>
-                    <a href="{{route('AmtbyDr')}}" class="btn btn-success">DrsAmts</a>
+                    <a href="{{route('DrLoad')}}" class="btn btn-primary">DrsMrn</a>
+                    <a href="{{route('BadData')}}" class="btn btn-danger">BadData</a>
+                    <a href="{{route('DrTotals')}}" class="btn btn-success">DrsTotalAmts</a>
 
                     </div>
 

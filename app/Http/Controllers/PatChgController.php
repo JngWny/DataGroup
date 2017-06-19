@@ -111,7 +111,7 @@ $patchgs = PatChg::groupby('AdmDr')
      * return unique data set
      */
 
-    public function dataplus()
+    public function drtotals()
     {
         //
 
