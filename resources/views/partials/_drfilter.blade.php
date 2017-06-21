@@ -1,6 +1,8 @@
-<ul>
+
 <table class="table table-bordered table-striped table-condensed" >
     <thead>
+        <th><h4> Filter? </th>
+        <th>Soon!</h4></th>
         <tr>
             <td>Doctor</td>
             <td>Include</td>

@@ -5,67 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <title>Data Streams</title>
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #ccffb3;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+        @include('partials._welcomeset')
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -76,20 +21,42 @@
                     @endif
                 </div>
             @endif
+        </div>
+
+<div class="row">
+    <hr>
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <h3><div class="panel-heading">Wish your data was a click away?</div></h3>
+
+                    <div class="panel-body">
+                    <hr>
+                    </div>
+            </div>
+        </div>
+</div>
+
+<div class="row">
+
+        <div class="col-md-8 col-md-offset-2">
+
+
 
             <div class="content">
                 <div class="title m-b-md">
-                    <h2>This could be your data set</h2>
+                    <h3>This could be your data set</h3>
                 </div>
-
+                <h1>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://weather.com/">Weather</a>
-                    <a href="https://www.health.ny.gov/">NYSDOH</a>
-                    <a href="https://www.wikipedia.org/">WikiPedia</a>
+                    <a href="http://www.icd10data.com/" target="_blank">ICD 10</a>
+                    <a href="https://commerce.health.state.ny.us/public/hcs_login.html" target="_blank">HCS</a>
+                    <a href="https://weather.com/" target="_blank">Weather</a>
+                    <a href="https://www.health.ny.gov/" target="_blank">NYSDOH</a>
+                    <a href="https://www.wikipedia.org/" target="_blank">WikiPedia</a>
                 </div>
+                </h1>
             </div>
         </div>
+</div>
     </body>
 </html>
