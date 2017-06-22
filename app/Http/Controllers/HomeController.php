@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Home;
 use Illuminate\Http\Request;
-use Illuminate\Database\Schema\Builder;
-use Illuminate\Database\Schema\MySqlBuilder;
+
+use Illuminate\Support\Facades\Schema;
 
 
 
@@ -26,16 +27,13 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
     {
 
-        return view('home');
+        $cols = Home::GetFieldList();
+
+        Return view('home',['cols'=>$cols]);
     }
-
-
-
-
-
-
 
 
 

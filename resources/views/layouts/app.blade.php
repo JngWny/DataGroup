@@ -18,6 +18,7 @@
                     <div class="btn-group">
 
 
+                    <a href="{{route('home')}}" class="btn btn-warning">Home</a>
                     <a href="{{route('DrLoad')}}" class="btn btn-primary">DrsMrn</a>
                     <a href="{{route('BadData')}}" class="btn btn-danger">BadData</a>
                     <a href="{{route('DrTotals')}}" class="btn btn-success">DrsTotalAmts</a>

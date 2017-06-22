@@ -10,9 +10,8 @@
                 <div class="panel-body">
 
                 <div class="col-md-6 col-md-offset-2">
-                <?php $columns = (Schema::getColumnListing('pat_chgs'));
-                sort($columns);?>
-                @foreach($columns as $column)
+
+                @foreach($cols as $column)
                 <ol>
                 <h4>{{$column}}</h4>
                 </ol>
