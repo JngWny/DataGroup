@@ -27,11 +27,16 @@
     <hr>
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <h3><div class="panel-heading">Wish your data was a click away?</div></h3>
+                <h3>
+                <div class="panel-heading">
+                 <br><br>
+                </div>
+                </h3>
 
-                    <div class="panel-body">
+                <div class="panel-body text-center">
                     <hr>
-                    </div>
+                    <h2>Wish your data was a click away?</h2>
+                </div>
             </div>
         </div>
 </div>
