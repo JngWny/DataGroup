@@ -24,8 +24,8 @@
 
             .top-right {
                 position: absolute;
-                right: 10px;
-                top: 18px;
+                right: 0.625rem;
+                top: 1.125rem;
             }
 
             .content {
@@ -33,13 +33,13 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 3.5rem;
             }
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
+                padding: 0 1.5rem;
+                font-size: 1.5rem;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
@@ -47,7 +47,7 @@
             }
 
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 2rempx;
             }
 </style>
 
