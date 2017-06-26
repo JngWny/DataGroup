@@ -3,13 +3,9 @@
 @section('content')
 <h1 class="text-center">Doctors total Amounts</h1>
 <div class="row">
-    <div class="col-md-2">
-        <div class="well well-sm">
-            @include('partials._drfilter')
-        </div>
-    </div>
 
-    <div class="col-md-6 col-md-offset-1">
+
+    <div class="col-md-6 col-md-offset-3">
 
         <table class="table table-bordered table-striped table-condensed" >
 
