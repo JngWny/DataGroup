@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');})->name('Welcome');
 
 Auth::routes();
 
@@ -36,3 +34,9 @@ Route::prefix('admin')->group(function() {
 Route::get('/drindex', 'PatChgController@drindex')->name('DrLoad');
 Route::get('/index', 'PatChgController@index')->name('BadData');
 Route::get('/drtotals', 'PatChgController@drtotals')->name('DrTotals');
+Route::get('/traces/trials', 'TrialController@index')->name('Trials');
+// comments
+Route::get('/posts/index','PostController@index')->name('PostList');
+Route::get('/posts/create','PostController@create')->name('PostCreate');
+Route::post('/posts','PostController@store');
+
