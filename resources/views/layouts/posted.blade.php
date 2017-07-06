@@ -3,7 +3,7 @@
 
 @include('partials._postscript')
 
-<div id="app">
+<div>
 	<body>
     	@yield('content')
 	</body>
