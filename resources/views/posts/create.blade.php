@@ -1,11 +1,18 @@
 @extends('layouts.posted')
 
+@include('partials._nav')
+
+@include('partials._errors')
+
 @section('content')
 
 <div class="row">
   <div class ="col-md-6 col-md-offset-1">
       <h1>Create New Post</h1>
       <hr>
+
+
+
 <form method = "POST" action = "/posts">
 {{ csrf_field() }}
     <div class="form-group">

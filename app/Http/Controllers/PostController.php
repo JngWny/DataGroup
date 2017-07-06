@@ -15,8 +15,11 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
-        Return view('posts.index');
+        //get all posts
+        $posts=Post::latest()->get();
+
+
+        Return view('posts.index',compact('posts'));
     }
 
     /**
@@ -40,6 +43,14 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
+        // validate request
+        $this->validate(request(),[
+            'title'=>'required|min:10|max:40',
+            'body'=>'required|min:10|max:200'
+
+
+            ]);
+
         // store in the database
         $post = new Post;
         $post->title = request('title');
@@ -58,7 +69,9 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
-        Return view('posts.show');
+
+
+        return view('posts.show', compact('post'));
     }
 
     /**

@@ -1,5 +1,5 @@
 <div class="blog-sidebar">
-<a href ="{{route('PostCreate')}}" class ="btn btn-primary">Comments/Requests</a>
+<a href ="{{route('PostCreate')}}" class ="btn btn-primary">Add Comment/Request</a>
 <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>

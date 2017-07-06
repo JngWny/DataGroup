@@ -30,13 +30,18 @@ Route::prefix('admin')->group(function() {
   Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset');
   Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
 });
+
 // my pages
 Route::get('/drindex', 'PatChgController@drindex')->name('DrLoad');
 Route::get('/index', 'PatChgController@index')->name('BadData');
 Route::get('/drtotals', 'PatChgController@drtotals')->name('DrTotals');
 Route::get('/traces/trials', 'TrialController@index')->name('Trials');
+
 // comments
 Route::get('/posts/index','PostController@index')->name('PostList');
 Route::get('/posts/create','PostController@create')->name('PostCreate');
+Route::get('/posts/{post}','PostController@show');
 Route::post('/posts','PostController@store');
+
+
 
