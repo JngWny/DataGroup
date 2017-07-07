@@ -8,6 +8,16 @@ use App\Http\Request\PostFormRequest;
 
 class PostController extends Controller
 {
+    /*
+     * Fixauthentication of the resource.
+ */
+public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

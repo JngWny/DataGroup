@@ -1,8 +1,9 @@
 <div class="blog-sidebar">
-<a href ="{{route('PostCreate')}}" class ="btn btn-primary">Add Comment/Request</a>
+<a href ="{{route('PostCreate')}}" class ="btn btn-primary">Add a Post</a>
 <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+            <h2>Why add a post? </h2>
+            <Strong><p>This product is evolving! You can make it better by sharing your insights. Clarity and relevance are the goals we strive for every day.</p>
+            <em><p> Thank you!</p></em></Strong>
 </div>
 
 

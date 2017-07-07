@@ -7,6 +7,14 @@ use Illuminate\Http\Request;
 
 class TrialController extends Controller
 {
+    /*
+     * Fixauthentication of the resource.
+ */
+public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -9,6 +9,7 @@
         <title>Data Streams</title>
         <!-- Styles -->
         @include('partials._welcomeset')
+
     </head>
     <body>
         <div class="flex-center position-ref">
