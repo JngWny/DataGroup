@@ -16,10 +16,11 @@ class CreatePostsTable extends Migration
         //these are the columns i want to use in my post column
         Schema::create('posts',function (Blueprint $table)
         {
-            $table->increments('Id');
-            $table->string('Title');
-            $table->text('Body');
-            $table->boolean('Approved')->default(true);
+            $table->increments('id');
+            $table->user_id('user_id')
+            $table->string('title');
+            $table->text('body');
+            $table->boolean('approved')->default(true);
             $table->timestamps();
         });
 

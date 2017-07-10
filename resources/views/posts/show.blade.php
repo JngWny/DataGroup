@@ -20,6 +20,7 @@
 
 <hr>
     <div class="comments">
+    @include('partials._errors')
       <ul class="list-group">
         @foreach ($post->comments as $comment )
           <li class="list-group-item">

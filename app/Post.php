@@ -1,8 +1,9 @@
 <?php
 
 namespace App;
+use Illuminate\Database\Query;
+use Carbon\Carbon;
 
-use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
@@ -22,6 +23,45 @@ class Post extends Model
 
 
     }
+
+
+    public function user()
+        {
+            return $this->belongsTo(User::class);
+        }
+
+
+    static function archives()
+        {
+         return static::selectRaw('year(created_at) year, monthname(created_at) month , count(*) total')
+        ->groupBy('month','year')
+        ->orderByRaw('min(created_at) desc')
+        ->get()
+        ->toArray();
+        }
+
+
+
+
+// filter request from sidebar
+    public function scopeFilter($query, $filters)
+    {
+// filter months
+        if ($month = request('month'))
+        {
+            $query
+            ->whereMonth('created_at',Carbon::parse($month)
+            ->month);
+        }
+// filter year
+         if ($year = request('year'))
+        {
+            $query
+            ->whereYear('created_at',$year);
+        }
+    }
+
+
 
 
 

@@ -2,8 +2,6 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
 class Comment extends Model
 {
     //relationship each comment has one post
@@ -13,7 +11,12 @@ class Comment extends Model
     	return $this->belongsTo(Post::class);
     }
 
-    protected $fillable = ['body',];
+
+
+    public function user()
+    {
+    	return $this->belongsTo(User::class);
+    }
 
 
 }

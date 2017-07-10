@@ -46,6 +46,9 @@ public function __construct()
      */
     public function store(Post $post)
     {
+
+        $this->validate(request(),['body'=>'required|min:5|max:100']);
+
         $post->addComment(request('body'));
 
 

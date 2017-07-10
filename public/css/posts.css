@@ -11,3 +11,8 @@ body
 
 	font: 1rem arial, sans-serif;
 }
+
+.sidebar-module-inset
+{
+	background-color:#0000FF;
+}

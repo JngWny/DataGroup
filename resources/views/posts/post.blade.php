@@ -8,9 +8,10 @@
 
 
     <p class="blog-post-meta">
+    	<strong>{{ $post->user->name}}</strong> on
       {{$post->created_at->toDayDateTimeString() }}
     </p>
 
-     {{ $post->body }}
+    {{ $post->body }}
 
 </div><!-- /.blog-post -->
