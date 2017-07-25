@@ -6,32 +6,29 @@
     <p class="lead blog-description">Feel free to share your thoughts</p>
   </div>
 </div>
-@include('partials._postscript')
-@include('partials._nav')
+
 </head>
+@include('partials._nav')
 
 @section('content')
-  <div class="row">
-    <div class="col-sm-8 blog-main">
+  <div class="row"><!-- blog-main -->
+    <div class="col-sm-6 col-md-offset-1 ">
 
       @foreach ($posts as $post)
 
       @include('posts.post')
 
       @endforeach
+    </div><!-- end blog-main -->
 
-      @include('posts.nav')
-
-    </div><!-- /.blog-main -->
-
-    <div class="col-sm-3 offset-sm-1 blog-sidebar">
-    @include ('partials._sidebarposts')
-    </div>
+    <div class="col-sm-4"><!-- sidebar. -->
+      @include('posts.sidebar')
+    </div><!-- SideBar -->
 
   </div><!-- /.row-->
 
+@include('posts.nav')
 
 @endsection
 
 
-</html>

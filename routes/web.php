@@ -35,16 +35,18 @@ Route::prefix('admin')->group(function() {
 Route::get('/drindex', 'PatChgController@drindex')->name('DrLoad');
 Route::get('/index', 'PatChgController@index')->name('BadData');
 Route::get('/drtotals', 'PatChgController@drtotals')->name('DrTotals');
-Route::get('/traces/trials', 'TrialController@index')->name('Trials');
 
 // posts
 Route::get('/posts/index','PostController@index')->name('PostList');
 Route::get('/posts/create','PostController@create')->name('PostCreate');
 Route::get('/posts/{post}','PostController@show');
-Route::post('/posts','PostController@store');
+Route::post('/posts','PostController@store')->name('PostStore');
 
 // comments
 Route::post('/posts/{post}/comments','CommentController@store');
 
+// tags
+Route::resource('tags', 'TagController', ['except' => ['create']]);
 
-
+// events
+Route::get('/traces/trials', 'SetTwoController@index')->name('Trials');

@@ -55,17 +55,8 @@
     </div><!-- /posts end here-->
   </div><!-- /col1 end here-->
 
-
-
-
-
-
-
-
-
-
     <div class="col-sm-3 offset-sm-1 blog-sidebar">
-      @include ('partials._sidebarposts')
+      @include ('posts.sidebar')
     </div>
 </div>
 

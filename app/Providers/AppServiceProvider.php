@@ -13,13 +13,25 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        view()->composer('partials._sidebarposts',function ($view)
+        //set archive variable
+        view()->composer('posts.sidebar',function ($view)
         {
             $view
             ->with('archives', \App\Post::archives());
 
         });
+
+        // set enums variable
+        view()->composer('traces.trialindex',function ($view2)
+        {
+            $view2
+            ->with('enums', \App\SetOne::all());
+
+        });
+
+
+
+
     }
 
     /**

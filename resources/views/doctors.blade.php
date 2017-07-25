@@ -8,7 +8,7 @@
 
         <div class="col-md-4 col-md-offset-4">
 
-            <table class="table table-bordered table-striped table-condensed" >
+            <table class="table table-striped table-condensed" >
 
                     <thead>
                     <tr>

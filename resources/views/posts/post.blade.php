@@ -3,9 +3,7 @@
       <a href="/posts/{{ $post->id }}">
       {{ $post->title }}
       </a>
-
     </h2>
-
 
     <p class="blog-post-meta">
     	<strong>{{ $post->user->name}}</strong> on

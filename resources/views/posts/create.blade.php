@@ -11,27 +11,33 @@
       <h1>Create New Post</h1>
       <hr>
 
-
-
-<form method = "POST" action = "/posts">
 {{ csrf_field() }}
-    <div class="form-group">
+    {!! Form::open(array('route' => 'PostStore')) !!}
 
-      <label for="title">Title</label>
-      <input type="text" class="form-control" id="title" name="title">
-    </div>
+        {{ Form::label('title', 'Title:') }}
+        {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+        </select>
 
-    <div class="form-group">
-      <label for="body">Body</label>
-      <textarea id="body" name="body" class="form-control"></textarea>
-    </div>
+        {{ Form::label('tags', 'Tags:') }}
+        <select class="form-control select2-multi" name="tags[]" multiple="multiple">
+          @foreach($tags as $tag)
+            <option value='{{ $tag->id }}'>{{ $tag->name }}</option>
+          @endforeach
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+        </select>
 
+        {{ Form::label('body', "Post Body:") }}
+        {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
+
+
+
+        {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
+      {!! Form::close() !!}
+      </div>
+
+  <div class="col-sm-3 offset-sm-1 blog-sidebar">
+    @include ('posts.sidebar')
   </div>
-</form>
-<div class="col-sm-3 offset-sm-1 blog-sidebar">
-  @include ('partials._sidebarposts')
 </div>
 @endsection
 

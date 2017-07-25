@@ -1,18 +1,14 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
 
 body
 {
-    background-color:#7fff00;
+    background-color:#e8edad;
 
-	font: 1rem arial, sans-serif;
+	font: 1.5rem arial, sans-serif;
 }
 
 .sidebar-module-inset
 {
-	background-color:#0000FF;
+	background-color:#f2ecea;
+	font: 1.25rem arial, sans-serif;
+
 }
