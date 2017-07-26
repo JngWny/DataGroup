@@ -1,5 +1,6 @@
 <div class="blog-post">
     <h2 class="blog-post-title">
+      {{ $post->id }}
       <a href="/posts/{{ $post->id }}">
       {{ $post->title }}
       </a>

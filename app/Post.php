@@ -7,6 +7,13 @@ use Carbon\Carbon;
 
 class Post extends Model
 {
+    // tags relationship
+    // relationship--  a post can have many tags
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag');
+    }
+
     //comments relationship
 
     public function comments()
@@ -18,10 +25,7 @@ class Post extends Model
 
     public function addComment($body)
     {
-
 		$this->comments()->create(compact('body'));
-
-
     }
 
 
@@ -31,6 +35,9 @@ class Post extends Model
         }
 
 
+
+
+// Archives filtering
     static function archives()
         {
          return static::selectRaw('year(created_at) year, monthname(created_at) month , count(*) total')
@@ -39,9 +46,6 @@ class Post extends Model
         ->get()
         ->toArray();
         }
-
-
-
 
 // filter request from sidebar
     public function scopeFilter($query, $filters)
@@ -60,9 +64,4 @@ class Post extends Model
             ->whereYear('created_at',$year);
         }
     }
-
-
-
-
-
 }

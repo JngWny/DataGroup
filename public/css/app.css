@@ -2,7 +2,7 @@
 
 body
 {
-    background-color:#dcefe0;
+    background-color:#90d38b;
 
 	font: 1rem arial, sans-serif;
 }
@@ -55,3 +55,7 @@ tr:nth-child(odd)
 	background-color: #bcb7cc;
 }
 
+.dropdown-toggle
+{
+	font-size: large
+}

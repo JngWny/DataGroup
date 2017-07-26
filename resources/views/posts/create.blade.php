@@ -4,6 +4,8 @@
 
 @include('partials._errors')
 
+{!! Html::style('css/select2.min.css') !!}
+
 @section('content')
 
 <div class="row">
@@ -15,7 +17,7 @@
     {!! Form::open(array('route' => 'PostStore')) !!}
 
         {{ Form::label('title', 'Title:') }}
-        {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '255')) }}
+        {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '100')) }}
         </select>
 
         {{ Form::label('tags', 'Tags:') }}
@@ -29,8 +31,6 @@
         {{ Form::label('body', "Post Body:") }}
         {{ Form::textarea('body', null, array('class' => 'form-control', 'required' => '')) }}
 
-
-
         {{ Form::submit('Create Post', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top: 20px;')) }}
       {!! Form::close() !!}
       </div>
@@ -39,7 +39,17 @@
     @include ('posts.sidebar')
   </div>
 </div>
-@endsection
 
+
+@endsection
+@section('scripts')
+
+  {!! Html::script('js/select2.min.js') !!}
+
+  <script type="text/javascript">
+    $('.select2-multi').select2();
+  </script>
+
+@endsection
 
 

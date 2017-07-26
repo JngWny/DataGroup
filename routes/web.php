@@ -39,7 +39,7 @@ Route::get('/drtotals', 'PatChgController@drtotals')->name('DrTotals');
 // posts
 Route::get('/posts/index','PostController@index')->name('PostList');
 Route::get('/posts/create','PostController@create')->name('PostCreate');
-Route::get('/posts/{post}','PostController@show');
+Route::get('/posts/{post}','PostController@show')->name('PostShow');
 Route::post('/posts','PostController@store')->name('PostStore');
 
 // comments

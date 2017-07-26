@@ -14,6 +14,11 @@
 <div class="row">
 		<div class="col-sm-8 blog-main">
 	<h1> {{ $post->title }} </h1>
+      <strong><div class="tags">Associated Tags:
+      @foreach ($post->tags as $tag)
+        <span class="label label-default">{{$tag->name}}</span>
+      @endforeach
+      </div></strong>
 			<hr>
 			{{ $post->body}}
 

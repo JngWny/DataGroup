@@ -5,9 +5,9 @@
 <div class="container">
 
     <div class="row">
-        <div class="col-md-8 col-md-offset-1">
+        <div class="col-md-8 col-md-offset-2">
 
-            <table class="table" >
+            <table class="table table-striped table-condensed" >
 
                     <thead>
                     <tr>

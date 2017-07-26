@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-
+use App\Tag;
+use Auth;
 use Illuminate\Http\Request;
 use App\Http\Request\PostFormRequest;
 use Carbon\Carbon;
-
+use Session;
 class PostController extends Controller
 {
     /*
@@ -34,7 +35,7 @@ public function __construct()
 
         $archives=Post::archives();
 
-        Return view('posts.index',compact('posts'));
+        Return view('posts.index')->withPosts($posts);
 
     }
 
@@ -45,8 +46,10 @@ public function __construct()
      */
     public function create()
     {
-        //
-        Return view('posts.create');
+        // add value for tags
+        $tags=Tag::all();
+
+        Return view('posts.create')->withTags($tags);
     }
 
     /**
@@ -58,29 +61,22 @@ public function __construct()
 
     public function store(Request $request)
     {
+
         // validate request
         $this->validate(request(),[
             'title'=>'required|min:5|max:40',
             'body'=>'required|min:5|max:200'
             ]);
 
-        /** store in the database old way
         $post = new Post;
-        $post->title = request('title');
-        $post->body = request('body');
         $post->user_id = auth()->id();
+        $post->title = $request->title;
+        $post->body = $request->body;
         $post->save();
-        */
-        // store in database new way
-        // using User Model
-        auth()
-        ->user()
-        ->publish
-            (
-                new Post(request(['title','body']))
-            );
 
-            return  redirect()->route('PostList');
+        $post->tags()->sync($request->tags,false);
+
+            return  redirect()->route('PostShow',$post->id);
     }
     /**
      * Display the specified resource.
@@ -102,7 +98,17 @@ public function __construct()
      */
     public function edit(Post $post)
     {
-        //
+        // find the post in the database and save as a var
+        $post = Post::find($id);
+
+
+        $tags = Tag::all();
+        $tags2 = array();
+        foreach ($tags as $tag) {
+            $tags2[$tag->id] = $tag->name;
+        }
+        // return the view and pass in the var we previously created
+        return view('posts.edit')->withPost($post)->withTags($tags2);
     }
 
 

@@ -13,7 +13,7 @@
 @section('content')
   <div class="row"><!-- blog-main -->
     <div class="col-sm-6 col-md-offset-1 ">
-
+<h2 class="text-align:center">Click to read entire content</h2>
       @foreach ($posts as $post)
 
       @include('posts.post')
