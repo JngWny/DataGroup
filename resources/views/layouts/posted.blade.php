@@ -2,7 +2,7 @@
 <html lang="en">
 <title>DataStream @yield('title')</title>
 
-@include('partials._scripts')
+
 @include('partials._bootstrap')
 
 {!! Html::style('css/posts.css') !!}
