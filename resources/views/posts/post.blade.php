@@ -11,6 +11,7 @@
       {{$post->created_at->toDayDateTimeString() }}
     </p>
 
+
     {{ $post->body }}
 
 </div><!-- /.blog-post -->
