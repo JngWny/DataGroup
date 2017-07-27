@@ -1,4 +1,4 @@
-<div class="col-md-2 col-offset-1">
+<!-- /.blog-sidebar -->
   <div class="blog-sidebar">
   <a href ="{{route('PostCreate')}}" class ="btn btn-primary">Add a Post</a>
     <div class="sidebar-module sidebar-module-inset">
@@ -24,4 +24,4 @@
       <h4>Contain info on a later version</h4>
     </div>
   </div>
-</div><!-- /.blog-sidebar -->
+<!-- /.blog-sidebar -->
