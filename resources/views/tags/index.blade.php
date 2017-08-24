@@ -1,4 +1,4 @@
-@extends('layouts.posted')
+@extends('layouts.app')
 
 @section('title', '| All Tags')
 

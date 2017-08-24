@@ -17,20 +17,21 @@ thead
 tbody
 {
 	color:black;
-	font-size: small;
+	font-size: medium;
 	font-weight: bold;
 	border-style: solid;
+	column-width: 2.0rem;
+	text-align: center;
+
 
 }
 table
 {
 	border-style: solid;
 }
-dr
+.dr
 {
 	font-size: x-small;
-	text-center;
-
     padding-top: .3125rem;
     padding-right: .3125rem;
     padding-bottom: .3125rem;
@@ -55,7 +56,24 @@ tr:nth-child(odd)
 	background-color: #bcb7cc;
 }
 
-.dropdown-toggle
+dropdown-toggle
 {
-	font-size: large
+	font-size: large;
+}
+well
+{
+	font-size: large;
+
+	font-weight: bold;
+}
+.resultz
+{
+	font-size: large;
+	font-weight: bold;
+}
+td
+{
+	padding-left: 10px;
+	padding-right: 6px;
+
 }

@@ -67,16 +67,20 @@ public function __construct()
             'title'=>'required|min:5|max:40',
             'body'=>'required|min:5|max:200'
             ]);
+        $slug=Auth::user()->name.hash('ripemd160', carbon::now());
+
+
 
         $post = new Post;
         $post->user_id = auth()->id();
         $post->title = $request->title;
         $post->body = $request->body;
+        $post->slug =$slug;
         $post->save();
 
         $post->tags()->sync($request->tags,false);
 
-            return  redirect()->route('PostShow',$post->id);
+            return  redirect()->route('PostList');
     }
     /**
      * Display the specified resource.
@@ -87,6 +91,7 @@ public function __construct()
     public function show(Post $post)
     {
         //
+
         return view('posts.show', compact('post'));
     }
 
@@ -100,7 +105,6 @@ public function __construct()
     {
         // find the post in the database and save as a var
         $post = Post::find($id);
-
 
         $tags = Tag::all();
         $tags2 = array();

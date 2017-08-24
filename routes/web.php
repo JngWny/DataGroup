@@ -46,7 +46,13 @@ Route::post('/posts','PostController@store')->name('PostStore');
 Route::post('/posts/{post}/comments','CommentController@store');
 
 // tags
-Route::resource('tags', 'TagController', ['except' => ['create']]);
+ Route::resource('tags', 'TagController');
+
+
 
 // events
 Route::get('/traces/trials', 'SetTwoController@index')->name('Trials');
+Route::get('/traces/sortable', 'SetTwoController@indexsort','?')->name('TrialSort');
+
+
+

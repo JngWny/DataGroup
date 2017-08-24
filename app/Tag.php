@@ -15,4 +15,10 @@ class Tag extends Model
     {
         return $this->belongsToMany('App\Post');
     }
+
+    //friendly serch terms
+    public function getRouteKeyName()
+    {
+    	return 'name';
+    }
 }

@@ -10,6 +10,8 @@
                 <a href="{{route('BadData')}}" class="btn btn-danger">RawData</a>
                 <a href="{{route('DrTotals')}}" class="btn btn-success">DrsTotalAmts</a>
                 <a href="{{route('Trials')}}" class ="btn btn-info">Trials</a>
+                <a href="{{route('TrialSort')}}" class ="btn btn-danger">TrialSort</a>
+
             </div>
         </div>
 

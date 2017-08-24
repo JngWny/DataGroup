@@ -2,13 +2,16 @@
 body
 {
     background-color:#d1dbb1;
-
-	font: 1.5rem arial, sans-serif;
 }
 
-.sidebar-module-inset
+sidebar-module-inset
 {
 	background-color:#f2ecea;
 	font: 1.25rem arial, sans-serif;
 
+}
+
+tag-list
+{
+font: 1.5rem arial, sans-serif;
 }

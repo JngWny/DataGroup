@@ -2,29 +2,23 @@
 
 @section('content')
 <div class="row">
-	<div class="col-sm-2  blog-sidebar">
+	<div class="col-sm-1 col-offset-1">
         <div class="well well-sm">
-			<table class="table table-bordered table-striped table-condensed text-center" >
-				<thead>
-					<td>Event</td>
-					<td>Group</td>
-					<td>Level</td>
-				</thead>
+        	<ul>
+        		@foreach($enums as $enum)
+        		<li>
+        			<strong>{{$enum->id}}</strong><input name="eventnum" type="radio" value = {{$enum->id}} >
+				</li>
+			 	@endforeach
+		 	</ul>
 
-			 	<tbody>
-			 		@foreach($enums as $enum)
-			 			<tr>
-			 				<td><strong>{{$enum->id}}</strong></td>
-			 				<td>{{ $enum->groupdesc}}</td>
-			 				<td>{{ $enum->level}}</td>
-		 				</tr>
-			 		@endforeach
-			 	</tbody>
-		 	</table>
+
+
+
 		</div>
 	</div>
 
-	<div class="col-md-8 col-offset-1">
+	<div class="col-md-7 col-offset-1">
 
 	<table class="table table-bordered table-striped table-condensed text-center" >
 		<thead>

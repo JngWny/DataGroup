@@ -21,7 +21,16 @@
     </div>
 
     <div class="sidebar-module">
-      <h4>Contain info on a later version</h4>
+      <h4>Tags</h4>
+        <ol class="list-unstyled tag-list">
+
+          @foreach($tags as $tag)
+            <li>
+              <a href="tags/{{$tag}}">{{$tag}}</a>
+            </li>
+          @endforeach
+        </ol>
+
     </div>
   </div>
 <!-- /.blog-sidebar -->

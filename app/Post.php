@@ -37,6 +37,9 @@ class Post extends Model
 
 
 
+
+
+
 // Archives filtering
     static function archives()
         {

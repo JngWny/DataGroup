@@ -1,7 +1,5 @@
 @extends('layouts.posted')
 
-@section('title', "| $tag->tagname Tag")
-
 @section('content')
 
 	<div class="row">
@@ -42,7 +40,7 @@
 								<span class="label label-default">{{ $tag->name }}</span>
 							@endforeach
 							</td>
-						<td><a href="{{ route('posts.show', $post->id ) }}" class="btn btn-default btn-xs">View</a></td>
+						<td><a href="{{ route('PostShow', $post->id ) }}" class="btn btn-default btn-xs">View</a></td>
 					</tr>
 					@endforeach
 				</tbody>
