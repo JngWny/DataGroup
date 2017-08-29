@@ -1,5 +1,5 @@
 <!-- /.blog-sidebar -->
-  <div class="blog-sidebar">
+<div class="blog-sidebar">
   <a href ="{{route('PostCreate')}}" class ="btn btn-primary">Add a Post</a>
     <div class="sidebar-module sidebar-module-inset">
       <h2>Why add a post? </h2>
@@ -21,16 +21,19 @@
     </div>
 
     <div class="sidebar-module">
-      <h4>Tags</h4>
+      <h3>Tags </h3>
+      <h4>See only post with these tags</h4>
         <ol class="list-unstyled tag-list">
 
           @foreach($tags as $tag)
             <li>
-              <a href="tags/{{$tag}}">{{$tag}}</a>
+              <a href="/posts/tags/{{ $tag }}">
+              {{$tag}}
+              </a>
             </li>
           @endforeach
         </ol>
 
     </div>
   </div>
-<!-- /.blog-sidebar -->
+<!-- /.blog-sidebar end-->

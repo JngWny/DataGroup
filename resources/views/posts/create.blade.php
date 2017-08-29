@@ -13,15 +13,15 @@
       <h1>Create New Post</h1>
       <hr>
 
-{{ csrf_field() }}
+    {{ csrf_field() }}
     {!! Form::open(array('route' => 'PostStore')) !!}
 
         {{ Form::label('title', 'Title:') }}
         {{ Form::text('title', null, array('class' => 'form-control', 'required' => '', 'maxlength' => '100')) }}
-        </select>
+
 
         {{ Form::label('tags', 'Tags:') }}
-        <select class="form-control select2-multi" name="tags[]" multiple="multiple">
+        <select class="form-control select2-multi" name="tags['1']" multiple="multiple">
           @foreach($tags as $tag)
             <option value='{{ $tag->id }}'>{{ $tag->name }}</option>
           @endforeach

@@ -29,6 +29,7 @@ public function __construct()
     public function index()
     {
 //get all posts
+
         $posts=Post::latest()
         ->filter(request(['month','year']))
         ->paginate(6);
@@ -68,7 +69,6 @@ public function __construct()
             'body'=>'required|min:5|max:200'
             ]);
         $slug=Auth::user()->name.hash('ripemd160', carbon::now());
-
 
 
         $post = new Post;

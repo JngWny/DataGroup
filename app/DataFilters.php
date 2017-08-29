@@ -23,6 +23,10 @@ class DataFilters extends QueryFilters
 		{
 			return $this->builder->orderBy('t3',$order);
 		}
+	public function numx($event='entrynum')
+		{
+			return $this->builder->where('entrynum',$entrynum);
+		}
 
 
 

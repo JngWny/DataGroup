@@ -1,10 +1,12 @@
-@extends('layouts.posted')
+@extends('layouts.app')
+
+@section('title', "| $tag->name Tag")
 
 @section('content')
 
 	<div class="row">
 		<div class="col-md-8">
-			<h1>{{ $tag->tagname }} Tag <small>{{ $tag->posts()->count() }} Posts</small></h1>
+			<h1>{{ $tag->name }} Tag <small>{{ $tag->posts()->count() }} Posts</small></h1>
 		</div>
 
 
@@ -40,7 +42,7 @@
 								<span class="label label-default">{{ $tag->name }}</span>
 							@endforeach
 							</td>
-						<td><a href="{{ route('PostShow', $post->id ) }}" class="btn btn-default btn-xs">View</a></td>
+						<td><a href="{{ route('posts.show', $post->id ) }}" class="btn btn-default btn-xs">View</a></td>
 					</tr>
 					@endforeach
 				</tbody>

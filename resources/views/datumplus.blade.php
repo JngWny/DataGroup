@@ -3,7 +3,7 @@
 @section('content')
 <h1 class="text-center">Doctors Total Amounts</h1>
 <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
         <table class="table table-striped table-condensed" >
             <thead>
                 <tr>

@@ -41,18 +41,15 @@ Route::get('/posts/index','PostController@index')->name('PostList');
 Route::get('/posts/create','PostController@create')->name('PostCreate');
 Route::get('/posts/{post}','PostController@show')->name('PostShow');
 Route::post('/posts','PostController@store')->name('PostStore');
+Route::get('posts/tags/{tag}','TagController@index')->name('TagSearch');
+
 
 // comments
 Route::post('/posts/{post}/comments','CommentController@store');
 
-// tags
- Route::resource('tags', 'TagController');
-
-
-
 // events
-Route::get('/traces/trials', 'SetTwoController@index')->name('Trials');
+
 Route::get('/traces/sortable', 'SetTwoController@indexsort','?')->name('TrialSort');
+Route::get('/traces/trials', 'SetTwoController@index')->name('Trials');
 
-
-
+// tags

@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
 use App\Tag;
-use App\Post;
 use Session;
+use App\Post;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class TagController extends Controller
 {
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->middleware('auth');
     }
 
@@ -21,12 +22,19 @@ class TagController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Tag $tag)
     {
-        $tags = Tag::all();
-        return view('tags.index')->withTags($tags);
 
+        $posts = $tag->posts;
+        return view('posts.index',compact('posts'));
     }
+
+
+
+
+
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -36,7 +44,7 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array('name' => 'required|max:255'));
+        $this->validate($request, ['name' => 'required|max:255']);
         $tag = new Tag;
         $tag->name = $request->name;
         $tag->save();
@@ -102,7 +110,6 @@ class TagController extends Controller
         // remove tags from all post
         $tag=Tag::find($id);
         $tag->posts()->detach();
-
         $tag->delete();
 
         Session::flash('success', 'Successfully removed your new tag!');

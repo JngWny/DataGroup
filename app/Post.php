@@ -11,14 +11,14 @@ class Post extends Model
     // relationship--  a post can have many tags
     public function tags()
     {
-        return $this->belongsToMany('App\Tag');
+        return $this->belongsToMany(Tag::class);
     }
 
     //comments relationship
 
     public function comments()
     {
-    	return $this->hasMany(Comment::class);
+    	return $this->hasMany(Comment::class)->orderBy('created_at','desc');
     }
 
     // add comments

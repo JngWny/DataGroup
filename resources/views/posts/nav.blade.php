@@ -1,3 +1,6 @@
 <nav class="blog-pagination">
-<?php echo $posts->links(); ?>
+	<ul>
+	{{--	{{ $posts->links() }} --}}
+	</ul>
+
 </nav>

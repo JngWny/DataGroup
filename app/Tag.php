@@ -3,22 +3,21 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Post;
 
 class Tag extends Model
 {
 
-	protected $fillable=['name'];
-
-    // get the articles for a given tag
     // relationship tag has many post
     public function posts()
     {
-        return $this->belongsToMany('App\Post');
+        return $this->belongsToMany(Post::class);
     }
 
-    //friendly serch terms
     public function getRouteKeyName()
     {
-    	return 'name';
+    	return "name";
     }
+
+
 }

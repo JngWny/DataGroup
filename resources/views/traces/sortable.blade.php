@@ -8,7 +8,7 @@
 <hr>
 
 	<div class="col-sm-2 col-offset-1">
-        <div class="well">
+        <div class="well sorting">
         	<table>
         		<thead>
         			<td>Event</td>
@@ -28,33 +28,37 @@
 			 	</tbody>
 		 	</table>
 		 	<br>
-		 {{$events->first()->setone_id}} Event Query<br>
+ 	{{$events->first()->setone_id}} Event Query<br>
 
 
 <hr>
-		Gender {{ Form::label('gender', 'f') }}
+		Gender <br>
+		{{ Form::label('gender', 'f') }}
 		{{ Form::radio('gender', 'm') }}
 		{{ Form::label('gender', 'm') }}
 		{{ Form::radio('gender', 'f') }}
 		{{ Form::label('gender', 'both') }}
 		{{ Form::radio('gender', 'x') }}
 <hr>
-		OrderBy {{ Form::label('Asc', 'asc') }}
+		OrderBy Score<br>
+		{{ Form::label('Asc', 'asc') }}
 		{{ Form::radio('score', 'asc') }}
 		{{ Form::label('Desc', 'desc') }}
 		{{ Form::radio('score', 'desc') }}
+<hr>
 
 <hr>
- 		{{Form::close()}}
-		</div>
-		<button>Filter</button>
+		<button class="sorting">Filter</button>
 
+ 		{{Form::close()}}
+
+		</div>
 	</div>
 
 	<div class="col-md-6 col-offset-1">
+		<div class="resultz">
+			Results
 
-	Results
-	<div class="resultz">
 		<table>
 			<thead>
 				<tr>
@@ -78,12 +82,16 @@
 			</tr>
 			@endforeach
 			</tbody>
-		</table>
+			</table>
+		</div>
 	</div>
+
 </div>
 
 
 @endsection
+
+
 
 
 
