@@ -4,7 +4,7 @@
 <h1 class="text-center">Doctors Count Unique MRN</h1>
 
 <div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4 col-md-offset-2">
         <table class="table table-striped table-condensed" >
             <thead>
                 <tr>
@@ -22,6 +22,16 @@
             </tbody>
         </table>
     </div>
+    <div class="col-md-2 col-md-offset-1">
+    <h3>Why is there an entry for Fudd,Elmer J?</h3>
+    <hr>
+    <h4>Maybe he owns a mansion and a yacht!</h4>
+    <hr>
+    <h4>Or is there another physician?</h4>
+    <hr>
+    <h4>Or is this entry a mistake?</h4>
+    </div>
+
 </div>
 
 

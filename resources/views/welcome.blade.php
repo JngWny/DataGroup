@@ -38,6 +38,7 @@
                 <div class="panel-body text-center">
                     <hr>
                     <h2>Wish your data was a click away?</h2>
+                    <h3>Check out the data sort page</h3>
                 </div>
             </div>
         </div>
