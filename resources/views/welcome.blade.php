@@ -35,7 +35,7 @@
                 </div>
                 </h3>
 
-                <div class="panel-body text-center">
+                <div class="well">
                     <hr>
                     <h2>Wish your data was a click away?</h2>
                     <h3>Check out the data sort page</h3>

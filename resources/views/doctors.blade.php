@@ -22,7 +22,7 @@
             </tbody>
         </table>
     </div>
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-3 well">
     <h3>Why is there an entry for Fudd,Elmer J?</h3>
     <hr>
     <h4>Maybe he owns a mansion and a yacht!</h4>

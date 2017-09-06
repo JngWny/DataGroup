@@ -1,14 +1,25 @@
 <style>
             html, body {
                 background-color: #ccffb3;
-                color: #636b6f;
+                color: black;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+                background-image: url('/images/backcal.jpeg');
             }
 
-            .full-height {
+            .well
+            {
+                background-color: white;
+                text-align: center;
+                opacity: .5;
+                color: blue;
+
+            }
+
+            .full-height
+            {
                 height: 100vh;
             }
 
@@ -37,13 +48,15 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: bright blue;
                 padding: 0 1.5rem;
                 font-size: 1.5rem;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                background-color: #ccffb3;
+
             }
 
             .m-b-md {
