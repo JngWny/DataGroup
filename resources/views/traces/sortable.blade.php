@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('content')
+<a href="{{  url("events/export").'?'.http_build_query(Request::query()) }}" class="btn btn-success">Export to excel</a>
 <div class="row">
 
 
@@ -10,11 +11,11 @@
 	<div class="col-sm-2 col-offset-1">
         <div class="well sorting">
         	<table>
-        		<thead>
-        			<td>Event</td>
-        			<td>Group</td>
-        			<td>Type</td>
-        		</thead>
+        		<tr>
+        			<th>Event</th>
+        			<th data-cell-style="cellStyle">Group</th>
+        			<th>Type</th>
+        		</tr>
 
         		<tbody>
 	        		@foreach($enums as $enum)
@@ -71,7 +72,7 @@
 			</thead>
 
 			<tbody>
-			@foreach($events as $event )
+			@foreach($events as $event)
 			<tr>
 				<td>{{$event->setone_id}}</td>
 				<td>{{$event->entrynum}}</td>
@@ -87,10 +88,15 @@
 	</div>
 
 </div>
-
+<div class="col-md-12 col-md-offset-4">
+<?php echo $events->render(); ?>
+</div>
 
 @endsection
+<link rel="stylesheet" type="text/css" href="{!! asset('css/app.css') !!}">
+<script type="text/javascript" src="{!! 'js/app.js' !!}">
 
+</script>
 
 
 

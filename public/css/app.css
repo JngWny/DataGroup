@@ -5,6 +5,8 @@ body
     background-color:#90d38b;
 
 	font: 1rem arial, sans-serif;
+	background-image: url('/images/canary.jpeg');
+
 }
 
 thead
@@ -83,4 +85,29 @@ td
 	font-size: large;
 	font-weight: bold;
 	background-color: #E3EB89;
+}
+
+td.1000
+{
+	background-color: white;
+}
+td.1100
+{
+	background-color: yellow;
+}
+td.1200
+{
+	background-color: blue;
+}
+td.1500
+{
+	background-color: red;
+}
+td.1600
+{
+	background-color: green;
+}
+td.2000
+{
+	background-color: orange;
 }

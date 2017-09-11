@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>DataStream @yield('title')</title>
-
-@include('partials._scripts')
-@include('partials._bootstrap')
-
-{!! Html::style('css/posts.css') !!}
-
-<div>
-	<body>
+<head>
+	<title>DataStream @yield('title')</title>
+	@yield('head')
+	@include('partials._scripts')
+	@include('partials._bootstrap')
+	{!! Html::style('css/posts.css') !!}
+</head>
+<body>
+	<div>
     	@yield('content')
-	</body>
+    </div>
+	@include('partials._footer')
+</body>
 @yield('scripts')
-</div>
- @include('partials._footer')
 </html>
 
 

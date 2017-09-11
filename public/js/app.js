@@ -30,6 +30,38 @@ if("undefined"==typeof jQuery)throw new Error("Bootstrap's JavaScript requires j
  * http://jquery.org/license
  *
  * Date: 2016-08-08
+ *
+ *example model https://jsfiddle.net e5gm59LL
+
+
+ function cellStyle(value,row,index)
+{
+ 	var trimvalue = value.trim();
+ 	var classStyle;
+ 	 switch(trimvalue)
+ 	 {
+ 	 	case '1000':
+ 	 		classStyle='1000';
+ 	 		break;
+ 		case '1100':
+ 			classStyle='1100';
+ 	 		break;
+ 		case '1200':
+ 		classStyle='1200';
+ 	 		break;
+ 		case '1500':
+ 		classStyle='1500';
+ 	 		break;
+ 		default:
+ 			classStyle='2000';
+	}
+
+	return
+	{
+		classes: classStyle
+	};
+}
+
 
 
 

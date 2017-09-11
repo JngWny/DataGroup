@@ -3,9 +3,9 @@
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script
-  src="http://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
+  </script> >
 <!-- Bootstrap core CSS -->
 
 

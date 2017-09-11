@@ -51,5 +51,6 @@ Route::post('/posts/{post}/comments','CommentController@store');
 
 Route::get('/traces/sortable', 'SetTwoController@indexsort','?')->name('TrialSort');
 Route::get('/traces/trials', 'SetTwoController@index')->name('Trials');
+Route::get('events/export','SetTwoController@export');
 
 // tags
