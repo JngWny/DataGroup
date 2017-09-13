@@ -10,7 +10,9 @@ class DataFilters extends QueryFilters
 
 	public function gender($gender)
 		{
+
 			return $this->builder->where('gender','!=',$gender);
+
 		}
 
 	public function setone_id($setone_id)

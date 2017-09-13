@@ -1,8 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<a href="{{  url("events/export").'?'.http_build_query(Request::query()) }}" class="btn btn-success">Export to excel</a>
 <div class="row">
+<a href="{{ url('events/export') }}">Download Excel xls</a>
+</div>
 
+<div>
 
 	{{Form::open(array('method'=>'get'))}}
 
